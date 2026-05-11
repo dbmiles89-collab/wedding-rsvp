@@ -5,94 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RSVP | Daniel & Fatima</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #0b2b2b;
-      font-family: 'Georgia', serif;
+      background: #0b2b2b url('background.jpg') center/cover no-repeat fixed;
+      font-family: 'Playfair Display', serif;
     }
     .script {
       font-family: 'Dancing Script', cursive;
-      font-size: 2.8rem;
-    }
-    .floral-bg {
-      background-image: linear-gradient(rgba(11, 43, 43, 0.85), rgba(11, 43, 43, 0.9)), 
-                        url('https://picsum.photos/id/1015/2000/1200');
-      background-size: cover;
-      background-position: center;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="text-[#e8d5b8] min-h-screen floral-bg">
+<body class="text-[#e8d5b8] min-h-screen">
   <div class="max-w-2xl mx-auto py-16 px-6">
     <div class="text-center mb-12">
-      <p class="text-sm tracking-widest mb-4">YOU ARE INVITED TO THE WEDDING OF</p>
+      <p class="text-sm tracking-[3px] mb-6 opacity-90">YOU HAVE BEEN INVITED TO THE WEDDING OF</p>
       
-      <h1 class="text-7xl leading-none mb-2">DANIEL</h1>
-      <p class="script text-[#d4af88] -mt-6">Miles</p>
+      <h1 class="text-6xl md:text-7xl">DANIEL</h1>
+      <p class="script text-5xl text-[#d4af88] -mt-3">Miles</p>
       
-      <p class="text-2xl my-6">AND</p>
+      <p class="text-3xl my-6 tracking-widest">AND</p>
       
-      <h1 class="text-7xl leading-none mb-2">FATIMA</h1>
-      <p class="script text-[#d4af88] -mt-6">Janyang</p>
+      <h1 class="text-6xl md:text-7xl">FATIMA</h1>
+      <p class="script text-5xl text-[#d4af88] -mt-3">Sanyang</p>
 
-      <div class="mt-10 text-lg">
-        <p>Saturday, 23rd May 2026 • 12:30 PM – 10:00 PM</p>
-        <p class="mt-2">St John’s Greenhill, Harrow, HA1 2JE</p>
+      <div class="mt-10 text-lg leading-relaxed">
+        <p>Saturday, 23 May 2026 • 12:30pm – 10:00pm</p>
+        <p>St John’s Greenhill, Harrow, HA1 2JE</p>
       </div>
     </div>
 
-    <div class="bg-[#0b2b2b]/90 backdrop-blur-md border border-[#d4af88]/30 rounded-3xl p-10 shadow-2xl">
-      <h2 class="text-center text-3xl mb-8 text-[#d4af88]">RSVP</h2>
+    <div class="bg-[#0b2b2b]/95 backdrop-blur-md border border-[#d4af88]/40 rounded-3xl p-10 shadow-2xl">
+      <h2 class="text-center text-3xl mb-10 text-[#d4af88] tracking-widest">RSVP</h2>
       
       <form name="rsvp" method="POST" data-netlify="true" class="space-y-8">
         <input type="hidden" name="form-name" value="rsvp">
 
         <div>
-          <label class="block text-sm tracking-widest mb-2">FULL NAME(S)</label>
+          <label class="block text-xs tracking-widest mb-2">FULL NAME(S)</label>
           <input type="text" name="name" required 
-                 class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:border-[#d4af88]">
+                 class="w-full bg-transparent border border-[#d4af88]/60 rounded-2xl px-6 py-4 text-lg focus:border-[#d4af88]">
         </div>
 
         <div class="grid grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm tracking-widest mb-2">WILL YOU ATTEND?</label>
+            <label class="block text-xs tracking-widest mb-2">WILL YOU ATTEND?</label>
             <select name="attending" required 
-                    class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4 text-lg">
-              <option value="">Select</option>
-              <option value="Yes">Yes, we will be there</option>
-              <option value="No">Unfortunately we cannot attend</option>
+                    class="w-full bg-transparent border border-[#d4af88]/60 rounded-2xl px-6 py-4 text-lg">
+              <option value="">Please select</option>
+              <option value="Yes">Yes, we will attend</option>
+              <option value="No">We regretfully cannot attend</option>
             </select>
           </div>
           <div>
-            <label class="block text-sm tracking-widest mb-2">NUMBER OF GUESTS</label>
+            <label class="block text-xs tracking-widest mb-2">NUMBER OF GUESTS</label>
             <input type="number" name="guests" value="1" min="1" 
-                   class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4 text-lg">
+                   class="w-full bg-transparent border border-[#d4af88]/60 rounded-2xl px-6 py-4 text-lg">
           </div>
         </div>
 
         <div>
-          <label class="block text-sm tracking-widest mb-2">DIETARY REQUIREMENTS / ALLERGIES</label>
+          <label class="block text-xs tracking-widest mb-2">DIETARY REQUIREMENTS</label>
           <textarea name="dietary" rows="3" 
-                    class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4"></textarea>
+                    class="w-full bg-transparent border border-[#d4af88]/60 rounded-2xl px-6 py-4"></textarea>
         </div>
 
         <div>
-          <label class="block text-sm tracking-widest mb-2">A MESSAGE FOR THE COUPLE (OPTIONAL)</label>
+          <label class="block text-xs tracking-widest mb-2">MESSAGE FOR DANIEL & FATIMA</label>
           <textarea name="message" rows="4" 
-                    class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4"></textarea>
+                    class="w-full bg-transparent border border-[#d4af88]/60 rounded-2xl px-6 py-4"></textarea>
         </div>
 
         <button type="submit"
-                class="w-full bg-[#d4af88] hover:bg-[#c49a6f] text-[#0b2b2b] font-medium py-5 rounded-2xl text-xl transition">
-          SEND RSVP
+                class="w-full bg-[#d4af88] hover:bg-amber-200 text-[#0b2b2b] font-medium py-5 rounded-2xl text-xl transition">
+          SUBMIT RSVP
         </button>
       </form>
     </div>
 
-    <p class="text-center mt-10 text-[#d4af88]/70 text-sm">
-      Your presence is our greatest gift ❤️
+    <p class="text-center mt-12 text-[#d4af88]/70 text-sm">
+      Your presence is our greatest gift
     </p>
   </div>
 </body>
