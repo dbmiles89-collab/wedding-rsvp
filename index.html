@@ -3,58 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Wedding | RSVP</title>
+  <title>RSVP | Daniel & Fatima</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #0b2b2b;
+      font-family: 'Georgia', serif;
+    }
+    .script {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem;
+    }
+    .floral-bg {
+      background-image: linear-gradient(rgba(11, 43, 43, 0.85), rgba(11, 43, 43, 0.9)), 
+                        url('https://picsum.photos/id/1015/2000/1200');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-stone-50 font-sans">
-  <div class="max-w-lg mx-auto py-12 px-6">
-    <div class="text-center mb-10">
-      <h1 class="text-5xl font-serif text-stone-800 mb-2">Emma & James</h1>
-      <p class="text-xl text-stone-600">Saturday, 15th November 2026</p>
-      <p class="text-stone-500">Venue • Location</p>
+<body class="text-[#e8d5b8] min-h-screen floral-bg">
+  <div class="max-w-2xl mx-auto py-16 px-6">
+    <div class="text-center mb-12">
+      <p class="text-sm tracking-widest mb-4">YOU ARE INVITED TO THE WEDDING OF</p>
+      
+      <h1 class="text-7xl leading-none mb-2">DANIEL</h1>
+      <p class="script text-[#d4af88] -mt-6">Miles</p>
+      
+      <p class="text-2xl my-6">AND</p>
+      
+      <h1 class="text-7xl leading-none mb-2">FATIMA</h1>
+      <p class="script text-[#d4af88] -mt-6">Janyang</p>
+
+      <div class="mt-10 text-lg">
+        <p>Saturday, 23rd May 2026 • 12:30 PM – 10:00 PM</p>
+        <p class="mt-2">St John’s Greenhill, Harrow, HA1 2JE</p>
+      </div>
     </div>
 
-    <form name="rsvp" method="POST" data-netlify="true" class="bg-white shadow-xl rounded-2xl p-8 space-y-6">
-      <input type="hidden" name="form-name" value="rsvp">
+    <div class="bg-[#0b2b2b]/90 backdrop-blur-md border border-[#d4af88]/30 rounded-3xl p-10 shadow-2xl">
+      <h2 class="text-center text-3xl mb-8 text-[#d4af88]">RSVP</h2>
+      
+      <form name="rsvp" method="POST" data-netlify="true" class="space-y-8">
+        <input type="hidden" name="form-name" value="rsvp">
 
-      <div>
-        <label class="block text-sm font-medium text-stone-700 mb-1">Full Name(s)</label>
-        <input type="text" name="name" required class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:outline-none focus:border-rose-300">
-      </div>
-
-      <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-stone-700 mb-1">Will you be attending?</label>
-          <select name="attending" required class="w-full px-4 py-3 border border-stone-300 rounded-xl">
-            <option value="">Select</option>
-            <option value="Yes">Yes, with pleasure!</option>
-            <option value="No">Sorry, can't make it</option>
-          </select>
+          <label class="block text-sm tracking-widest mb-2">FULL NAME(S)</label>
+          <input type="text" name="name" required 
+                 class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:border-[#d4af88]">
         </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm tracking-widest mb-2">WILL YOU ATTEND?</label>
+            <select name="attending" required 
+                    class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4 text-lg">
+              <option value="">Select</option>
+              <option value="Yes">Yes, we will be there</option>
+              <option value="No">Unfortunately we cannot attend</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm tracking-widest mb-2">NUMBER OF GUESTS</label>
+            <input type="number" name="guests" value="1" min="1" 
+                   class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4 text-lg">
+          </div>
+        </div>
+
         <div>
-          <label class="block text-sm font-medium text-stone-700 mb-1">Number of guests</label>
-          <input type="number" name="guests" value="1" min="1" class="w-full px-4 py-3 border border-stone-300 rounded-xl">
+          <label class="block text-sm tracking-widest mb-2">DIETARY REQUIREMENTS / ALLERGIES</label>
+          <textarea name="dietary" rows="3" 
+                    class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4"></textarea>
         </div>
-      </div>
 
-      <div>
-        <label class="block text-sm font-medium text-stone-700 mb-1">Dietary requirements / allergies</label>
-        <textarea name="dietary" rows="3" class="w-full px-4 py-3 border border-stone-300 rounded-xl"></textarea>
-      </div>
+        <div>
+          <label class="block text-sm tracking-widest mb-2">A MESSAGE FOR THE COUPLE (OPTIONAL)</label>
+          <textarea name="message" rows="4" 
+                    class="w-full bg-transparent border border-[#d4af88]/50 rounded-2xl px-6 py-4"></textarea>
+        </div>
 
-      <div>
-        <label class="block text-sm font-medium text-stone-700 mb-1">Message for the couple (optional)</label>
-        <textarea name="message" rows="3" class="w-full px-4 py-3 border border-stone-300 rounded-xl"></textarea>
-      </div>
+        <button type="submit"
+                class="w-full bg-[#d4af88] hover:bg-[#c49a6f] text-[#0b2b2b] font-medium py-5 rounded-2xl text-xl transition">
+          SEND RSVP
+        </button>
+      </form>
+    </div>
 
-      <button type="submit" 
-              class="w-full bg-rose-600 hover:bg-rose-700 text-white font-medium py-4 rounded-2xl transition text-lg">
-        Send RSVP
-      </button>
-    </form>
-
-    <p class="text-center text-stone-400 text-sm mt-8">We can't wait to celebrate with you ❤️</p>
+    <p class="text-center mt-10 text-[#d4af88]/70 text-sm">
+      Your presence is our greatest gift ❤️
+    </p>
   </div>
 </body>
 </html>
